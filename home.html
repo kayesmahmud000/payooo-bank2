@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main class=" flex justify-center">
+        <div class="bg-white">
+            
+            <div class="display">
+              <div class="artboard phone-3">
+                <div class=" flex justify-between">
+                    <div class=" w-full  flex items-center gap-10 px-4 justify-between">
+                       
+                       
+                        <div class="flex p-5 justify-between">
+                            <div class="w-12">
+                                <img class="w-full" src="./img/payoo.png" alt="">
+                            </div>
+                           
+                            <div class="">
+                               
+                              <div  class="stat-value"> $<span id="available-amount">8900</span></div>
+                              <div class="stat-desc">Available Balance</div>
+                            </div>
+                          
+                        </div>
+                        <div>
+                            <button class="btn bg-white border-1 ">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                Log Out
+                              </button>
+                          </div>
+                        
+                          
+                    </div>
+                    
+                </div>
+                <div class="divider"></div>
+                <div class="bg-white p-5">
+                    <h2 class="text-2xl font-bold">🔥 Welcome to Payooo!</h2>
+                    <p class=" text-lg ">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+                </div>
+                <div class="divider"></div>
+                <div class="grid grid-cols-3 gap-2">
+                    <button id="add-money-btn"  class="btn btn-lg">Add Money</button>
+                    <button id="out-money-btn" class="btn btn-lg">Cash Out</button>
+                    <button id="transfer-btn" class="btn btn-lg">Transfer Money</button>
+                    <button id="bonus-btn" class="btn btn-lg">Get Bonus</button>
+                    <button id="pay-btn" class="btn btn-lg">Pay Bill</button>
+                    <button id="transenctions-btn" class="btn btn-lg">Transactions</button>
+                </div>
+                <div class="divider"></div>
+                <div id="add-money-from" class="card  bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                        <h3 class="text-lg font-bold">Add Money</h3>
+                      <div class="form-control">
+                        <label class="form-control w-full max-w-xs">
+                            <div class="label">
+                              <span class="label-text">Select A Bank</span>
+                            </div>
+                            <select class="select select-bordered">
+                              <option disabled selected>Select Bank</option>
+                              <option>Sonali Bank </option>
+                              <option>Rupali Bank </option>
+                              <option>Islami Bank </option>
+                            </select>
+                            
+                          </label>
+                        <label class="label">
+                          <span  class="label-text"> Bank Account Number</span>
+                        </label>
+                      
+                        <input id="account-number" type="text" placeholder="Account number" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Amount to Add</span>
+                        </label>
+                        <input id="add-amount" type="text" placeholder="Amount" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">4 Digit Pin</span>
+                        </label>
+                        <input id="add-money-pin" type="password" placeholder="4 digit pin" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="add-btn" class="btn btn-primary">Add Money</button>
+                      </div>
+                    </form>
+                  </div>
+                <div id="out-money-from" class="card hidden bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                        <h3 class="text-lg font-bold">Cash Out</h3>
+                      <div class="form-control">
+                       
+                        <label class="label">
+                          <span  class="label-text"> Agent Number</span>
+                        </label>
+                      
+                        <input id="agent-number" type="text" placeholder="Agent number" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text"> Cash Out Amount</span>
+                        </label>
+                        <input id="out-amount" type="text" placeholder="Amount" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">4 Digit Pin</span>
+                        </label>
+                        <input id="out-money-pin" type="password" placeholder="4 digit pin" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="out-btn" class="btn btn-primary">Cash Out</button>
+                      </div>
+                    </form>
+                  </div>
+                <div id="transfer-money-from" class="card hidden bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                        <h3 class="text-lg font-bold">Transfer Money</h3>
+                      <div class="form-control">
+                       
+                        <label class="label">
+                          <span  class="label-text">User Account Number</span>
+                        </label>
+                      
+                        <input id="transfer-money-number" type="text" placeholder="Agent number" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text"> Cash Out Amount</span>
+                        </label>
+                        <input id="transfer-money-amount" type="text" placeholder="Amount" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">4 Digit Pin</span>
+                        </label>
+                        <input id="transfer-money-pin" type="password" placeholder="4 digit pin" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="transfer-money-btn" class="btn btn-primary">Cash Out</button>
+                      </div>
+                    </form>
+                  </div>
+                <div id="get-bonus-from" class="card hidden bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                        <h3 class="text-lg font-bold">Get Bonus</h3>
+                      <div class="form-control">
+                       
+                        <label class="label">
+                          <span  class="label-text">Enter Bonus Coupon</span>
+                        </label>
+                      
+                        <input id="coupon-number" type="text" placeholder="Enter Your Coupon" class="input input-bordered" required />
+                      </div>
+                      <div>
+                        <button id="bonus-btn" class="btn btn-primary">Get Bonus</button>
+                      </div>
+                       
+                      
+                    </form>
+                  </div>
+                    <div id="pay-bill-from" class="card hidden bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                      <form class="card-body">
+                          <h3 class="text-lg font-bold">Pay Bill</h3>
+                        <div class="form-control">
+                          <label class="form-control w-full max-w-xs">
+                              <div class="label">
+                                <span class="label-text">Select to Pay</span>
+                              </div>
+                              <select class="select select-bordered">
+                                <option disabled selected>Select back</option>
+                                <option>Electricity</option>
+                                <option>Educational </option>
+                                <option>Internet</option>
+                              </select>
+                              
+                            </label>
+                          <label class="label">
+                            <span  class="label-text"> Biller Account Number</span>
+                          </label>
+                        
+                          <input id="bill-number" type="text" placeholder="Account number" class="input input-bordered" required />
+                        </div>
+                        <div class="form-control">
+                          <label class="label">
+                            <span class="label-text">Amount to Pay</span>
+                          </label>
+                          <input id="pay-amount" type="text" placeholder="Amount" class="input input-bordered" required />
+                        </div>
+                        <div class="form-control">
+                          <label class="label">
+                            <span class="label-text">4 Digit Pin</span>
+                          </label>
+                          <input id="pay-pin" type="password" placeholder="4 digit pin" class="input input-bordered" required />
+                        </div>
+                        <div class="form-control mt-6">
+                          <button id="pay-btn" class="btn btn-primary">Pay Now</button>
+                        </div>
+                      </form>
+                    </div>
+                    <div id="transaction-history" class="  hidden text-xl font-bold" >
+                      <h2>Transaction-History</h2>
+                      <div id="transection-conteiner">
+
+                      </div>
+
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+              </div>
+       </main>
+       <script src="./js/utitlity.js"></script>
+       <script src="./js/home.js"></script>
+       
+    </body>   
+</html>
