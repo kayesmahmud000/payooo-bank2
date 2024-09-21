@@ -8,7 +8,7 @@ document.getElementById('login-btn').addEventListener('click', function(event){
 
     const phnNumber= getInputByValueId('number-input')
     const pinNumber=getInputByValueId('pin-number')
-    if(phnNumber === '01234' && pinNumber=== 1234){
+    if(phnNumber== 123450 && pinNumber=== 1234){
         window.location.href ='./home.html'
     }else{
         alert('Invalid Input')
